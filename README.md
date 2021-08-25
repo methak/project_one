@@ -27,10 +27,10 @@ tbd
 tbd
 
 ## Code Snippets
-tbd
+```<text> tbd </text>```
 
 ## Unsolved Problems
-`<text> tbd </text>`
+tbd
 
 ## Future Work
 tbd

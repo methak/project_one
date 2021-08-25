@@ -1,2 +1,12 @@
-# project_one
-GA Student project one
+# JAMList 
+### by Team Jam
+
+## Overview & User Stories
+
+## Technologies Used
+
+## Installation
+
+## Unsolved Problems
+
+## Wireframes

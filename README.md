@@ -1,4 +1,4 @@
-# JAMList 
+# JAMList
 ### by Team Jam
 
 ## Overview & User Stories
@@ -36,7 +36,7 @@ tbd
 tbd
 
 ## Acknowledgements
-tbd
+tbd :)
 
 External API Use
 Instacart API

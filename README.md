@@ -24,11 +24,11 @@ tbd - Heroku
 
 ## Wireframes
 ![Image of Wireframe]
-(assets/wireframe.png)
+(./assets/wireframe.png)
 
 ## ERD
 ![Image of ERD]
-(assets/erd.png)
+(./assets/erd.png)
 
 ## Code Snippets
 `<text> tbd </text>`

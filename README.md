@@ -8,6 +8,7 @@ The user decides what store they are going to, or enters store information if no
 ## Technologies Used
 * HTML
 * CSS
+* CSS Frameworks
 * JavaScript
 * Node.js
 * Express.js
@@ -38,5 +39,5 @@ tbd
 ## Acknowledgements
 tbd
 
-External API Use
+## External API Use
 Instacart API

@@ -1,0 +1,25 @@
+{
+  "name": "project_one",
+  "version": "1.0.0",
+  "description": "## Overview & User Stories JAMList is an app to help users create and manage shopping lists by store. The user decides what store they are going to, or enters store information if not listed, and then adds items to their list.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/methak/project_one.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/methak/project_one/issues"
+  },
+  "homepage": "https://github.com/methak/project_one#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "5.13.8"
+  }
+}

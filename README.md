@@ -31,7 +31,7 @@ tbd - Heroku
 (assets/erd.png)
 
 ## Code Snippets
-```<text> tbd </text>```
+`<text> tbd </text>`
 
 ## Unsolved Problems
 tbd

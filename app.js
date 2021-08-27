@@ -14,4 +14,4 @@ app.get('/', (req,res)=>{
     res.render('index.ejs')
 })
 
-app.listen(3000, ()=>console.log('connected to express app on port 3000'))
+app.listen(3080, ()=>console.log('connected to express app on port 3080'))

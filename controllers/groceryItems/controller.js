@@ -1,4 +1,4 @@
-const { groceryItems } = require("../../models");
+const { groceryItems, ShoppingList } = require("../../models");
 
 module.exports = {
   getAll: (req, res) => {
@@ -22,7 +22,14 @@ module.exports = {
     });
   },
   new: (req, res) => {
-    res.render("groceryItems/new.ejs");
+    ShoppingList.find({}, (err, allShoppingLists)=>{
+      if(err){
+          res.send(err)
+      }else {
+          res.render('groceryItems/new.ejs', {shoppingLists: allShoppingLists})
+      }
+  })
+    
   },
   create: (req, res) => {
     const groceryItemInfo = req.body;

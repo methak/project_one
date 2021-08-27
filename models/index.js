@@ -1,5 +1,5 @@
 const GroceryItem = require('./groceryItems')
-const ShoppingList = requier('./shoppingList')
+const ShoppingList = require('./shoppingList')
 
 module.exports = {
   GroceryItem,

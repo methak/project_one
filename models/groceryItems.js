@@ -27,7 +27,13 @@ const groceryItemSchema = new mongoose.Schema({
   },
   isOrganic: {
     type: Boolean
-}, {timestamps: true}
+  },
+  {
+    shoppingList: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'ShoppingList'
+  },
+  {timestamps: true}
 })
 
 

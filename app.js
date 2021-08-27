@@ -1,28 +1,17 @@
-// config
-const express = require ('express')
+const express = require('express')
 const app = express()
-const port = 3000
+const methodOverride = require('method-override')
+const db = require('./db')
+const {groceryItemsController, shoppingListController} = require('./controllers/index')
 
-// require mongoose
-const mongoose = require('mongoose');
-
-// import method-override
-const methodOverride = require('method-override');
-
-// ----- middleware -----
-app.use(express.urlencoded({extended:true}));
-
-// ----- method-overide -----
-app.use(methodOverride('_method'));
-
-// ----- server initialization -----
-mongoose.connect('mongodb://localhost:27017/basiccrud', { useNewUrlParser: true});
-mongoose.connection.once('open', ()=> {
-    console.log('connected to mongo');
-});
-
-
-// ----- listener -------
-app.listen(port, () => {
-  console.log("Let's go shopping!")
+app.use(methodOverride('_method'))
+app.use(express.urlencoded({extended:true}))
+app.use(express.static('public'))
+app.use(express.json())
+app.use('/groceryItems', groceryItemsController)
+app.use('/shoppingList', shoppingListController)
+app.get('/', (req,res)=>{
+    res.render('index.ejs')
 })
+
+app.listen(3000, ()=>console.log('connected to express app on port 3000'))

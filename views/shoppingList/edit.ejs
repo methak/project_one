@@ -11,13 +11,13 @@
     <form method="POST" action="/shoppingList/<%=shoppingList._id%>?_method=PUT">
       <div>
         <label> Store Name: </label>
-        <input type="text" name="name" value="<%=shoppingList.storeName%>" />
+        <input type="text" name="storeName" value="<%=shoppingList.storeName%>" />
         <label> Store Address: </label>
-        <input type="text" name="name" value="<%=shoppingList.storeAddress%>" />
+        <input type="text" name="storeAddress" value="<%=shoppingList.storeAddress%>" />
         <label> Store Hours: </label>
-        <input type="text" name="name" value="<%=shoppingList.storeHours%>" />
+        <input type="text" name="storeHours" value="<%=shoppingList.storeHours%>" />
         <label> Total Price: </label>
-        <input type="text" name="name" value="<%=shoppingList.totalPrice%>" />
+        <input type="text" name="totalPrice" value="<%=shoppingList.totalPrice%>" />
       </div>
       <div>
         <input type="submit" value="Edit Shopping List" />

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Shopping List</title>
+  </head>
+  <body>
+    <h1>New Shopping List</h1>
+    <form method="POST" action="/shoppingList">
+      <div>
+        <label> Store Name: </label>
+        <input type="text" name="storeName"/>
+        <label> Store Address: </label>
+        <input type="text" name="storeAddress"/>
+        <label> Store Hours: </label>
+        <input type="text" name="storeHours"/>
+        <label> Total Price: </label>
+        <input type="text" name="totalPrice"/>
+        <input type="submit" value="Create Shopping List"/>
+      </div>
+    </form>
+    <a href="/shoppingList/">Back to Index</a>
+  </body>
+</html>

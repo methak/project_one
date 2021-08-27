@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Shopping List Index Page</title>
+ </head>
+ <body>
+   <h1>Shopping List Index Page</h1>
+   <a href="/shoppingList/new">Create New Shopping List</a>
+
+   <a href="/">Back Home</a>
+   <h2>Shopping List:</h2>
+   <% for( let i = 0; i < shoppingList.length; i++ ) { %>
+   <a href="/shoppingList/<%=shoppingList[i]._id%>"><%=shoppingList[i].storeName%></a>
+   <% } %>
+ </body>
+</html>

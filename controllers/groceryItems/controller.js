@@ -16,7 +16,7 @@ module.exports = {
       if (error) {
         res.send(error);
       } else {
-        console.log(foundGroceryItem.title, "<< Grocery Items found");
+        console.log(foundGroceryItem.name, "<< Grocery Items found");
         res.render("groceryItems/show.ejs", { groceryItem: foundGroceryItem });
       }
     });
@@ -40,7 +40,7 @@ module.exports = {
       if (error) {
         res.send(error);
       } else {
-        console.log(deletedGroceryItem.title, "<< Grocery Item deleted");
+        console.log(deletedGroceryItem.name, "<< Grocery Item deleted");
         res.redirect("/groceryItems/");
       }
     });
@@ -50,7 +50,7 @@ module.exports = {
       if (error) {
         res.send(error);
       } else {
-        console.log(foundGroceryItem.title, "<< Grocery Item found");
+        console.log(foundGroceryItem.name, "<< Grocery Item found");
         res.render("groceryItems/edit.ejs", { article: foundGroceryItem });
       }
     });
@@ -63,7 +63,7 @@ module.exports = {
         if (error) {
           res.send(error);
         } else {
-          console.log(updatedGroceryItem.title, "<< Grocery Item updated");
+          console.log(updatedGroceryItem.name, "<< Grocery Item updated");
           res.redirect("/groceryItems/" + req.params.id);
         }
       }

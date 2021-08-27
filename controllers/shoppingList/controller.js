@@ -6,8 +6,8 @@ module.exports = {
       if (error) {
         res.send(error);
       } else {
-        console.log(allShoppingLists.length, "<< shopping list found");
-        res.render("shoppingList/index.ejs", { authors: allShoppingLists });
+        console.log(allShoppingLists.length, "<< shopping lists found");
+        res.render("shoppingList/index.ejs", { shoppingList: allShoppingLists });
       }
     });
   },
@@ -16,8 +16,8 @@ module.exports = {
       if (error) {
         res.send(error);
       } else {
-        console.log(foundShoppingList.name, "<< authors found");
-        res.render("shoppingList/show.ejs", { author: foundShoppingList });
+        console.log(foundShoppingList.storeName, "<< stores found");
+        res.render("shoppingList/show.ejs", { shoppingList: foundShoppingList });
       }
     });
   },
@@ -25,7 +25,7 @@ module.exports = {
     res.render("shoppingList/new.ejs");
   },
   create: (req, res) => {
-    const authorInfo = req.body;
+    const shoppingListInfo = req.body;
     ShoppingList.create(shoppingListInfo, (error, newShoppingList) => {
       if (error) {
         return res.send(error);
@@ -50,7 +50,7 @@ module.exports = {
       if (error) {
         res.send(error);
       } else {
-        console.log(foundShoppingList.name, "<< shopping list found");
+        console.log(foundShoppingList.storeName, "<< shopping list found");
         res.render("shoppingList/edit.ejs", { shoppingList: foundShoppingList });
       }
     });
@@ -63,7 +63,7 @@ module.exports = {
         if (error) {
           res.send(error);
         } else {
-          console.log(updatedShoppingList.name, "<< shopping list updated");
+          console.log(updatedShoppingList.storeName, "<< shopping list updated");
           res.redirect("/shoppingList/" + req.params.id);
         }
       }

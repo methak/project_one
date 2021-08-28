@@ -8,12 +8,13 @@
         <h1>Edit Grocery Item page</h1>
         <form action="/groceryItems/<%=groceryItem_id %>?_method=PUT" method="POST">
             <div>
-            Item Name: <input type="text" name="name" /><br/>
-            Category : <input type="text" name="catergory" /><br/>
-            Description : <input type="textarea" name="description" /><br/>
-            Price : <input type="text" name="price" /><br/>
-            Quantity : <input type="text" name="quantity" /><br/>
-            is Organic : <input type="checkbox" name="isOrganic" /><br/>
+            Item Name: <input type="text" name="name" value="<%=groceryItem.name%>"/><br/>
+            Category : <input type="text" name="category" value="<%=groceryItem.category%>"/><br/>
+            Description : <input type="textarea" name="description" value="<%=groceryItem.description%>" /><br/>
+            Price : <input type="text" name="price" value="<%=groceryItem.price%>"/><br/>
+            Quantity : <input type="text" name="quantity" value="<%=groceryItem.quantity%>" /><br/>
+            is Organic : <input type="checkbox" name="isOrganic" 
+                <% if(fruit.readyToEat === true){ %> checked <% } %> /><br/>
             is Purchased : <input type="checkbox" name="isPurchased" /><br/> 
             </div>  
             <div>

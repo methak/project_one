@@ -32,6 +32,15 @@ module.exports = {
     
   },
   create: (req, res) => {
+    if (req.body.isOrganic === 'on') {
+      req.body.isOrganic = true
+    } else {
+      req.body.isOrganic = false
+    }if (req.body.isPurchased === 'on') {
+      req.body.isPurchased = true
+    } else {
+      req.body.isPurchased = false
+    }
     const groceryItemInfo = req.body;
     GroceryItem.create(groceryItemInfo, (error, newGroceryItem) => {
       if (error) {

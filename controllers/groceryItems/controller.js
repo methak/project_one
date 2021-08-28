@@ -1,4 +1,4 @@
-const { groceryItems, ShoppingList } = require("../../models");
+const { GroceryItem, ShoppingList } = require("../../models");
 
 module.exports = {
   getAll: (req, res) => {
@@ -58,7 +58,7 @@ module.exports = {
         res.send(error);
       } else {
         console.log(foundGroceryItem.name, "<< Grocery Item found");
-        res.render("groceryItems/edit.ejs", { article: foundGroceryItem });
+        res.render("groceryItems/edit.ejs", { groceryItem: foundGroceryItem });
       }
     });
   },

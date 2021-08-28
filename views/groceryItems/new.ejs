@@ -19,11 +19,11 @@
             <div>
                 <select name="shoppingLists">
                     <% for( let i = 0; i < shoppingLists.length; i++ ) { %>
-                        <option value="<%=shoppingLists[i]._id%>"><%=shoppingLists[i].storeName%></option>
+                        <option value="<%=shoppingLists[i]._id%>"><%=shoppingLists[i].name%></option>
                     <% } %>
                 </select>
             </div>
-            <div>>
+            <div>
             <input type="submit" name="" value="Create Item"/>
             </div>
         </form>

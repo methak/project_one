@@ -11,5 +11,12 @@
         <nav>
           <a href="/groceryItems/new">Create a New Item</a>
         </nav>
+        <a href="/">Back Home</a>
+        <h2>Shopping item: </h2>
+        <% for( let i=0; i < groceryItem.length; i++ ) { %>
+            <a href="/groceryItem/<%=groceryItem[i]._id%>">
+                <%=groceryItem[i].name%>
+            </a>
+            <% } %>
     </body>
 </html>

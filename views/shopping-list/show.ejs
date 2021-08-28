@@ -12,10 +12,10 @@
     Total Price: <%=shoppingList.totalPrice%><br>
     Date: <%= shoppingList.updatedAt%>
       <nav>
-          <a href="/shoppingList">Back to Index</a><br>
-          <a href="/shoppingList/<%=shoppingList%>/edit">Edit this Shopping List</a>
+          <a href="/shopping-list">Back to Index</a><br>
+          <a href="/shopping-list/<%=shoppingList._id%>/edit">Edit this Shopping List</a>
       </nav>
-        <form method="POST" action="/shoppingList/<%=shoppingList._id%>?_method=DELETE">
+        <form method="POST" action="/shopping-list/<%=shoppingList._id%>?_method=DELETE">
           <input type="submit" value="Delete"/>
         </form>
     </body>

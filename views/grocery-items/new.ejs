@@ -6,24 +6,24 @@
     </head>
     <body>
         <h1>New Grocery Item page</h1>
-        <form action="/groceryItems" method="POST">
+        <form action="/grocery-items" method="POST">
             <div>
             Item Name: <input type="text" name="name" /><br/>
-            Category : <input type="text" name="catergory" /><br/>
+            Category : <input type="text" name="category" /><br/>
             Description : <input type="textarea" name="description" /><br/>
             Price : <input type="text" name="price" /><br/>
             Quantity : <input type="text" name="quantity" /><br/>
             is Organic : <input type="checkbox" name="isOrganic" /><br/>
-            is Purchased : <input type="checkbox" name="isPurchased" /><br/> 
-            </div>  
+            is Purchased : <input type="checkbox" name="isPurchased" /><br/>
+            </div>
             <div>
                 <select name="shoppingLists">
                     <% for( let i = 0; i < shoppingLists.length; i++ ) { %>
-                        <option value="<%=shoppingLists[i]._id%>"><%=shoppingLists[i].storeName%></option>
+                        <option value="<%=shoppingLists[i]._id%>"><%=shoppingLists[i].name%></option>
                     <% } %>
                 </select>
             </div>
-            <div>>
+            <div>
             <input type="submit" name="" value="Create Item"/>
             </div>
         </form>

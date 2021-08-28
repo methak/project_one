@@ -1,5 +1,5 @@
-const groceryItemsController = require('./groceryItems/router')
-const shoppingListController = require('./shoppingList/router')
+const groceryItemsController = require('./grocery-items/router')
+const shoppingListController = require('./shopping-list/router')
 
 module.exports = {
   groceryItemsController,

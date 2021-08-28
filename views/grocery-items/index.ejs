@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Grocery Items index page</title>
+    </head>
+    <body>
+        <h1>Grocery Items index page</h1>
+
+
+        <nav>
+          <a href="/grocery-items/new">Create a New Item</a>
+        </nav>
+        <a href="/">Back Home</a>
+        <h2>Shopping item: </h2>
+        <% for( let i=0; i < groceryItem.length; i++ ) { %>
+            <a href="/grocery-items/<%=groceryItem[i]._id%>">
+                <%=groceryItem[i].name%>
+            </a>
+            <% } %>
+    </body>
+</html>

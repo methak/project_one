@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Shopping List</title>
+  </head>
+  <body>
+    <h1>Edit Shopping List</h1>
+    <form method="POST" action="/shopping-list/<%=shoppingList._id%>?_method=PUT">
+      <div>
+        <label> Store Name: </label>
+        <input type="text" name="storeName" value="<%=shoppingList.storeName%>" />
+        <label> Store Address: </label>
+        <input type="text" name="storeAddress" value="<%=shoppingList.storeAddress%>" />
+        <label> Store Hours: </label>
+        <input type="text" name="storeHours" value="<%=shoppingList.storeHours%>" />
+        <label> Total Price: </label>
+        <input type="text" name="totalPrice" value="<%=shoppingList.totalPrice%>" />
+      </div>
+      <div>
+        <input type="submit" value="Edit Shopping List" />
+      </div>
+    </form>
+    <form method="POST" action="/shopping-list/<%=shoppingList._id%>?_method=DELETE">
+      <input type="submit" value="Delete Shopping List" />
+    </form>
+  </body>
+</html>

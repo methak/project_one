@@ -8,12 +8,12 @@
  </head>
  <body>
    <h1>Shopping List Index Page</h1>
-   <a href="/shoppingList/new">Create New Shopping List</a>
+   <a href="/shopping-list/new">Create New Shopping List</a>
 
    <a href="/">Back Home</a>
    <h2>Shopping List:</h2>
    <% for( let i = 0; i < shoppingList.length; i++ ) { %>
-   <a href="/shoppingList/<%=shoppingList[i]._id%>"><%=shoppingList[i].storeName%></a>
+   <a href="/shopping-list/<%=shoppingList[i]._id%>"><%=shoppingList[i].storeName%></a>
    <% } %>
  </body>
 </html>

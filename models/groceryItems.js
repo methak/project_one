@@ -28,7 +28,7 @@ const groceryItemSchema = new mongoose.Schema({
   isOrganic: {
     type: Boolean
   },
-  
+
     shoppingList: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'ShoppingList'

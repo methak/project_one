@@ -7,7 +7,7 @@ module.exports = {
         res.send(error);
       } else {
         console.log(allGroceryItems.length, "<< Grocery Items found");
-        res.render("groceryItems/index.ejs", { groceryItem: allGroceryItems });
+        res.render("grocery-items/index.ejs", { groceryItem: allGroceryItems });
       }
     });
   },
@@ -17,19 +17,19 @@ module.exports = {
         res.send(error);
       } else {
         console.log(foundGroceryItem.name, "<< Grocery Items found");
-        res.render("groceryItems/show.ejs", { groceryItem: foundGroceryItem });
+        res.render("grocery-items/show.ejs", { groceryItem: foundGroceryItem });
       }
     });
   },
   new: (req, res) => {
-    ShoppingList.find({}, (err, allShoppingLists)=>{
+    GroceryItem.find({}, (err, allGroceryItems)=>{
       if(err){
           res.send(err)
       }else {
-          res.render('groceryItems/new.ejs', {shoppingLists: allShoppingLists})
+          res.render('grocery-items/new.ejs', {shoppingLists: allGroceryItems})
       }
   })
-    
+
   },
   create: (req, res) => {
     const groceryItemInfo = req.body;
@@ -38,7 +38,7 @@ module.exports = {
         return res.send(error);
       } else {
         console.log(newGroceryItem);
-        res.redirect("/groceryItems");
+        res.redirect("/grocery-items");
       }
     });
   },
@@ -48,7 +48,7 @@ module.exports = {
         res.send(error);
       } else {
         console.log(deletedGroceryItem.name, "<< Grocery Item deleted");
-        res.redirect("/groceryItems/");
+        res.redirect("/grocery-items/");
       }
     });
   },
@@ -58,7 +58,7 @@ module.exports = {
         res.send(error);
       } else {
         console.log(foundGroceryItem.name, "<< Grocery Item found");
-        res.render("groceryItems/edit.ejs", { groceryItem: foundGroceryItem });
+        res.render("grocery-items/edit.ejs", { groceryItem: foundGroceryItem });
       }
     });
   },
@@ -71,7 +71,7 @@ module.exports = {
           res.send(error);
         } else {
           console.log(updatedGroceryItem.name, "<< Grocery Item updated");
-          res.redirect("/groceryItems/" + req.params.id);
+          res.redirect("/grocery-items/" + req.params.id);
         }
       }
     );

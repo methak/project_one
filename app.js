@@ -4,6 +4,7 @@ const methodOverride = require('method-override')
 const db = require('./db')
 const {groceryItemsController, shoppingListController} = require('./controllers/index')
 
+app.use(express.static('public'))
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended:true}))
 app.use(express.static('public'))

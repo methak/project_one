@@ -8,7 +8,7 @@
   </head>
   <body>
     <h1>Edit Shopping List</h1>
-    <form method="POST" action="/shoppingList/<%=shoppingList._id%>?_method=PUT">
+    <form method="POST" action="/shopping-list/<%=shoppingList._id%>?_method=PUT">
       <div>
         <label> Store Name: </label>
         <input type="text" name="storeName" value="<%=shoppingList.storeName%>" />
@@ -23,7 +23,7 @@
         <input type="submit" value="Edit Shopping List" />
       </div>
     </form>
-    <form method="POST" action="/shoppingList/<%=shoppingList._id%>?_method=DELETE">
+    <form method="POST" action="/shopping-list/<%=shoppingList._id%>?_method=DELETE">
       <input type="submit" value="Delete Shopping List" />
     </form>
   </body>

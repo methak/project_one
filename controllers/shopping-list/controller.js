@@ -7,7 +7,7 @@ module.exports = {
         res.send(error);
       } else {
         console.log(allShoppingLists.length, "<< shopping lists found");
-        res.render("shoppingList/index.ejs", { shoppingList: allShoppingLists });
+        res.render("shopping-list/index.ejs", { shoppingList: allShoppingLists });
       }
     });
   },
@@ -17,12 +17,12 @@ module.exports = {
         res.send(error);
       } else {
         console.log(foundShoppingList.storeName, "<< stores found");
-        res.render("shoppingList/show.ejs", { shoppingList: foundShoppingList });
+        res.render("shopping-list/show.ejs", { shoppingList: foundShoppingList });
       }
     });
   },
   new: (req, res) => {
-    res.render("shoppingList/new.ejs");
+    res.render("shopping-list/new.ejs");
   },
   create: (req, res) => {
     const shoppingListInfo = req.body;
@@ -31,7 +31,7 @@ module.exports = {
         return res.send(error);
       } else {
         console.log(newShoppingList);
-        res.redirect("/shoppingList");
+        res.redirect("/shopping-list");
       }
     });
   },
@@ -41,7 +41,7 @@ module.exports = {
         res.send(error);
       } else {
         console.log(deletedShoppingList.name, "<< shopping list deleted");
-        res.redirect("/shoppingList/");
+        res.redirect("/shopping-list/");
       }
     });
   },
@@ -51,7 +51,7 @@ module.exports = {
         res.send(error);
       } else {
         console.log(foundShoppingList.storeName, "<< shopping list found");
-        res.render("shoppingList/edit.ejs", { shoppingList: foundShoppingList });
+        res.render("shopping-list/edit.ejs", { shoppingList: foundShoppingList });
       }
     });
   },
@@ -64,7 +64,7 @@ module.exports = {
           res.send(error);
         } else {
           console.log(updatedShoppingList.storeName, "<< shopping list updated");
-          res.redirect("/shoppingList/" + req.params.id);
+          res.redirect("/shopping-list/" + req.params.id);
         }
       }
     );

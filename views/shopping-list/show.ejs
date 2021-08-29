@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <title>Shopping List Show Page</title>
+    </head>
+    <body>
+      <h1>Shopping List Show Page</h1>
+    Store Name: <%=shoppingList.storeName%><br>
+    Store Address: <%=shoppingList.storeAddress%><br>
+    Store Hours: <%=shoppingList.storeHours%><br>
+    Total Price: <%=shoppingList.totalPrice%><br>
+    Date: <%= shoppingList.updatedAt%>
+      <nav>
+          <a href="/shopping-list">Back to Index</a><br>
+          <a href="/shopping-list/<%=shoppingList._id%>/edit">Edit this Shopping List</a>
+      </nav>
+        <form method="POST" action="/shopping-list/<%=shoppingList._id%>?_method=DELETE">
+          <input type="submit" value="Delete"/>
+        </form>
+    </body>
+</html>

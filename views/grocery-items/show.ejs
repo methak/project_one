@@ -10,5 +10,16 @@
         <nav>
             <a href="/grocery-items">Back to Grocery Items Index</a>
         </nav>
+        <div>
+            Item Name: <input type="text" name="name" value="<%=groceryItem.name%>"/><br/>
+            Category : <input type="text" name="category" value="<%=groceryItem.category%>"/><br/>
+            Description : <input type="textarea" name="description" value="<%=groceryItem.description%>" /><br/>
+            Price : <input type="text" name="price" value="<%=groceryItem.price%>"/><br/>
+            Quantity : <input type="text" name="quantity" value="<%=groceryItem.quantity%>" /><br/>
+            is Organic : <input type="checkbox" name="isOrganic" 
+                <% if(groceryItem.isOrganic === true){ %> checked <% } %> /><br/>
+            is Purchased : <input type="checkbox" name="isPurchased" 
+            <% if(groceryItem.isPurchased === true){ %> checked <% } %> /><br/> 
+            </div>  
     </body>
 </html>

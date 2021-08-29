@@ -22,11 +22,11 @@ module.exports = {
     });
   },
   new: (req, res) => {
-    GroceryItem.find({}, (err, allGroceryItems)=>{
+    ShoppingList.find({}, (err, allShoppingList)=>{
       if(err){
           res.send(err)
       }else {
-          res.render('grocery-items/new.ejs', {shoppingLists: allGroceryItems})
+          res.render('grocery-items/new.ejs', {shoppingLists: allShoppingList})
       }
   })
 
@@ -72,15 +72,24 @@ module.exports = {
     });
   },
   update: (req, res) => {
-    GroceryItem.findByIdAndUpdate(
-      req.params.id,
-      req.body,
-      (error, updatedGroceryItem) => {
+    if (req.body.isOrganic === 'on') {
+      req.body.isOrganic = true
+    } else {
+      req.body.isOrganic = false
+    }
+    
+    if (req.body.isPurchased === 'on') {
+      req.body.isPurchased = true
+    } else {
+      req.body.isPurchased = false
+    }
+    GroceryItem.findByIdAndUpdate(req.params.id,req.body, (error, updatedGroceryItem) => {
+
         if (error) {
           res.send(error);
         } else {
           console.log(updatedGroceryItem.name, "<< Grocery Item updated");
-          res.redirect("/grocery-items/" + req.params.id);
+          res.redirect("/grocery-items");
         }
       }
     );

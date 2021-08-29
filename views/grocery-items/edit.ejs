@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1>Edit Grocery Item page</h1>
-        <form action="/grocery-items/<%=groceryItem_id %>?_method=PUT" method="POST">
+        <form action="/grocery-items/<%=groceryItem._id %>?_method=PUT" method="POST">
             <div>
             Item Name: <input type="text" name="name" value="<%=groceryItem.name%>"/><br/>
             Category : <input type="text" name="category" value="<%=groceryItem.category%>"/><br/>
@@ -15,17 +15,12 @@
             Quantity : <input type="text" name="quantity" value="<%=groceryItem.quantity%>" /><br/>
             is Organic : <input type="checkbox" name="isOrganic" 
                 <% if(groceryItem.isOrganic === true){ %> checked <% } %> /><br/>
-            is Purchased : <input type="checkbox" name="isPurchased" /><br/> 
+            is Purchased : <input type="checkbox" name="isPurchased" 
+                <% if(groceryItem.isPurchased === true){ %> checked <% } %> /><br/> 
             </div>  
+
             <div>
-                <select name="shoppingLists">
-                    <% for( let i = 0; i < shoppingLists.length; i++ ) { %>
-                        <option value="<%=shoppingLists[i]._id%>"><%=shoppingLists[i].name%></option>
-                    <% } %>
-                </select>
-            </div>
-            <div>
-            <input type="submit" name="" value="Create Item"/>
+            <input type="submit" name="" value="Update Item"/>
             </div>
         </form>
     </body>

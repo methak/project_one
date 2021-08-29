@@ -1,3 +1,29 @@
+:root {
+  --lt-gray: #f9fbfcff;
+  --yellow: #fec960ff;
+  --lavender: #ddd1feff;
+  --lt-blue: #90ceffff;
+  --lt-purple: #7a9bf4ff;
+  --purple: #6367e9ff;
+}
+
 body {
-  background-color: lemonchiffon;
+  background-color: var(--lt-gray);
+  font-family: 'Poppins', sans-serif;
+}
+
+.lt-purple-bg {
+  background-color: var(--lt-purple);
+}
+
+.purple-text {
+  color: var(--purple);
+}
+
+.yellow-text {
+  color: var(--yellow);
+}
+
+.purple-prompt {
+  background-color: var(--lt-purple);    
 }

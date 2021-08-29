@@ -82,4 +82,5 @@ body {
 
 .purple-prompt {
   background-color: var(--lt-purple);
+  max-width: 400px
 }

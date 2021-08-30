@@ -9,5 +9,6 @@ router.get('/:id/edit',groceryItemsController.edit)
 router.delete('/:id',groceryItemsController.destroy)
 router.put('/:id',groceryItemsController.update)
 router.post('/',groceryItemsController.create)
+router.get('/category/:name', groceryItemsController.new)
 
 module.exports = router

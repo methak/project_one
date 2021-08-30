@@ -1,4 +1,5 @@
 const { GroceryItem, ShoppingList } = require("../../models");
+const categoryItems = ['meat', 'produce', 'baking',]
 
 module.exports = {
   getAll: (req, res) => {
@@ -7,7 +8,7 @@ module.exports = {
         res.send(error);
       } else {
         console.log(allGroceryItems.length, "<< Grocery Items found");
-        res.render("grocery-items/index.ejs", { groceryItem: allGroceryItems });
+        res.render("grocery-items/index.ejs", { groceryItem: allGroceryItems, category: categoryItems});
       }
     });
   },
@@ -23,12 +24,14 @@ module.exports = {
   },
   new: (req, res) => {
     ShoppingList.find({}, (err, allShoppingList)=>{
+      let categoryName = req.params.name
       if(err){
           res.send(err)
       }else {
-          res.render('grocery-items/new.ejs', {shoppingLists: allShoppingList})
+          res.render('grocery-items/new.ejs', {shoppingLists: allShoppingList, categoryName: categoryName})
       }
   })
+
 
   },
   create: (req, res) => {
@@ -77,7 +80,7 @@ module.exports = {
     } else {
       req.body.isOrganic = false
     }
-    
+
     if (req.body.isPurchased === 'on') {
       req.body.isPurchased = true
     } else {

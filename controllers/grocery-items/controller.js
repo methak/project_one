@@ -1,5 +1,5 @@
 const { GroceryItem, ShoppingList } = require("../../models");
-const categoryItems = ['meat', 'produce', 'baking',]
+const categoryItems = ['Fruits', 'Vegetables', 'Meat', 'Fish', 'Frozen Foods', 'Bread & Bakery', 'Beverages', 'Baking', 'Personal Care', 'Household Supplies', 'Baby Items', 'Pasta/Rice']
 
 module.exports = {
   getAll: (req, res) => {

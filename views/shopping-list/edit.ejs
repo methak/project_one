@@ -4,27 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <title>Edit Shopping List</title>
   </head>
   <body>
-    <h1>Edit Shopping List</h1>
+  <div class="flex justify-center items-center">
+    <div class="container flex rounded-lg my-4 p-4 mx-auto h-full bg-blue-200 w-3/4 md:w-1/3 lg:w-1/3 xl:w-1/4">
+      <div class="w-full flex gap-x-4">
+        <div class="w-full bg-gray-200">
+          <div class="my-4">
+    <h1 class="text-center mb-3">Edit Shopping List</h1>
     <form method="POST" action="/shopping-list/<%=shoppingList._id%>?_method=PUT">
-      <div>
-        <label> Store Name: </label>
-        <input type="text" name="storeName" value="<%=shoppingList.storeName%>" />
-        <label> Store Address: </label>
-        <input type="text" name="storeAddress" value="<%=shoppingList.storeAddress%>" />
-        <label> Store Hours: </label>
-        <input type="text" name="storeHours" value="<%=shoppingList.storeHours%>" />
-        <label> Total Price: </label>
-        <input type="text" name="totalPrice" value="<%=shoppingList.totalPrice%>" />
-      </div>
-      <div>
-        <input type="submit" value="Edit Shopping List" />
-      </div>
+      <div class="mx-5">
+
+    <label for="name" class="uppercase"> Store Name: </label>
+      <input class="border w-full mb-3" type="text" name="storeName" value="<%=shoppingList.storeName%>" />
+
+    <label for="address" class="uppercase"> Store Address: </label>
+      <input class="border w-full mb-3" type="text" name="storeAddress" value="<%=shoppingList.storeAddress%>" />
+
+    <label for="hours" class="uppercase"> Store Hours: </label>
+      <input class="border w-full mb-3" type="text" name="storeHours" value="<%=shoppingList.storeHours%>" />
+
+    <label for="hours" class="uppercase"> Total Price: </label>
+      <input class="border w-full mb-3" type="text" name="totalPrice" value="<%=shoppingList.totalPrice%>" />
+
+      <input type="submit" value="Edit Shopping List" class="w-full justify-center mb-3" />
     </form>
+
     <form method="POST" action="/shopping-list/<%=shoppingList._id%>?_method=DELETE">
-      <input type="submit" value="Delete Shopping List" />
+      <input type="submit" value="Delete Shopping List" class="w-full justify-center" />
     </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

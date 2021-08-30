@@ -4,16 +4,31 @@
    <meta charset="UTF-8" />
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" type="text/css" href="/css/style.css" />
    <title>Shopping List Index Page</title>
  </head>
  <body>
-   <h1>Shopping List Index Page</h1>
-   <a href="/shopping-list/new">Create New Shopping List</a>
+   <div class="flex justify-center items-center">
+     <div class="container flex rounded-lg my-4 p-4 mx-auto h-full bg-blue-200 w-3/4 md:w-1/3 lg:w-1/3 xl:w-1/4">
+       <div class="w-full flex gap-x-4">
+         <div class="w-full bg-gray-200">
+          <div class="my-4">
+  <h1 class="text-center mb-3">Shopping List Index Page</h1>
 
-   <a href="/">Back Home</a>
+   <a href="/shopping-list/new" class="text-center mb-3">Create New Shopping List</a><br>
+
+   <a href="/" for="name">Back Home</a>
+
    <h2>Shopping List:</h2>
-   <% for( let i = 0; i < shoppingList.length; i++ ) { %>
-   <a href="/shopping-list/<%=shoppingList[i]._id%>"><%=shoppingList[i].storeName%></a>
-   <% } %>
- </body>
+   <ul>
+     <% for( let i = 0; i < shoppingList.length; i++ ) { %>
+       <li> <a href="/shopping-list/<%=shoppingList[i]._id%>" for="name" class="uppercase"><%=shoppingList[i].storeName%></a></li>
+       <% } %>
+    </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

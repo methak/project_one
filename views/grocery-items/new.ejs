@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>New Grocery Item page</title>
-    </head>
-    <body>
-        <h1>New Grocery Item page</h1>
-        <form action="/grocery-items" method="POST">
-            <div>
-            Item Name: <input type="text" name="name" /><br/>
-            Category : <input type="text" name="category" value="<%=categoryName%>" /><br/>
-            Description : <input type="textarea" name="description" /><br/>
-            Price : <input type="text" name="price" /><br/>
-            Quantity : <input type="text" name="quantity" /><br/>
-            is Organic : <input type="checkbox" name="isOrganic" /><br/>
-            is Purchased : <input type="checkbox" name="isPurchased" /><br/>
-            </div>
-            <div>
-                <select name="shoppingLists">
-                    <% for( let i = 0; i < shoppingLists.length; i++ ) { %>
-                        <option value="<%=shoppingLists[i]._id%>"><%=shoppingLists[i].storeName%></option>
-                    <% } %>
-                </select>
-            </div>
-            <div>
-            <input type="submit" name="" value="Create Item"/>
-            </div>
-        </form>
-    </body>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="/css/style.css" />
+      <title>New Grocery Item page</title>
+  </head>
+  <body>
+    <div class="flex justify-center items-center">
+      <div class="container flex rounded-lg my-4 p-4 mx-auto h-full bg-blue-200 w-3/4 md:w-1/3 lg:w-1/3 xl:w-1/4">
+        <div class="w-full flex gap-x-4">
+          <div class="w-full bg-gray-200">
+            <div class="my-4">
+      <h1 class="text-center mb-3">New Grocery Item page</h1>
+      <form action="/grocery-items" method="POST">
+          <div class="mx-5">
+
+            <label for="name" class="uppercase">Item Name:</label>
+            <br/><input id="name" type="text" name="name" class="border w-full mb-3"/>
+
+            <br/><label for="category" class="uppercase">Category:</label>
+            <br/><input id="category" type="text" name="category" value="<%=categoryName%>" class="border w-full mb-3"/>
+
+            <br/><label for="description" class="uppercase">Description:</label>
+            <br/><textarea id="description" name="description" style="resize:none; height:100px;" class="border w-full mb-3"></textarea>
+
+            <br/><label for="price" class="uppercase">Price:</label>
+            <br/><input id="price" type="text" name="price" class="border w-full mb-3"/>
+
+            <br/><label for="quantity" class="uppercase">Quantity:</label>
+            <br/><input price="quantity" type="text" name="quantity" class="border w-full mb-3"/>
+
+            <label for="isOrganic" class="uppercase">is Organic:</label>
+            <input id="isOrganic" type="checkbox" name="isOrganic" class="border ml-2 mb-3"/><br/>
+
+            <label for="isPurchased" class="uppercase">is Purchased: </label>
+            <input id="isPurchased" type="checkbox" name="isPurchased" class="border ml-2 mb-3"/><br/>
+
+              <select name="shoppingLists" class="border w-full mb-7">
+                  <% for( let i = 0; i < shoppingLists.length; i++ ) { %>
+                      <option value="<%=shoppingLists[i]._id%>"><%=shoppingLists[i].storeName%></option>
+                  <% } %>
+              </select>
+
+            <br/><input type="submit" name="" value="Add Item" class="w-full justify-center"/>
+          </div>
+        </div>
+      </form>
+      </div>
+      </div>
+    </div>
+  </body>
+
 </html>

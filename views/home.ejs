@@ -12,20 +12,88 @@
   <div class="flex justify-center items-center">
     <div class="container flex rounded-lg my-4 p-4 mx-auto h-screen  bg-blue-200">
       <div class="w-full flex  gap-x-4 ">
-        <div class ="w-full bg-gray-200 lg:w-1/3" >
-          <h3>Shopping List</h3>
-          <div class="contianer">
-            <ul>
-              <li>Banana</li>
-              <li>Apple</li>
-              <li>Milk</li>
-            </ul>
-      
+        <!--Left panel section --> 
+        <div class ="w-full lg:w-1/3" >
+          <div class="bg-gray-200 rounded-lg shadow-lg">
+            <h2 class="font-bold bg-blue-400 ">Shopping List</h2>
+            <div class="container">
+              <ul>
+                <% for( let i=0; i < groceryItem.length; i++ ) { %>
+                  <li>
+                  <a href="/grocery-items/<%=groceryItem[i]._id%>">
+                      <%=groceryItem[i].name%>
+                  </a>
+                </li>
+                  <% } %>
+                   
+              </ul>
+            </div>
           </div>
-      
+          <div class="bg-gray-100 rounded-lg mt-8  shadow-lg">
+            <div class= "text-xl font-bold bg-blue-400">
+              Shopping History
+            </div>
+            <div class="container">
+              <ul>
+                <% for( let i=0; i < shoppingList.length; i++ ) { %>
+                  <li>
+                    <a href="/shopping-list/<%=shoppingList[i]._id%>"><%=shoppingList[i].storeName%></a>
+                </li>
+                  <% } %>
+                   
+              
+              </ul>
+            </div>
+
+          </div>
+
         </div>
-        <div class="w-full bg-white">
+        <!--Main Display Section-->        
+        <div class="w-full bg-white rounded-lg shadow-lg">
           <h3>Grocery Item</h3>
+          <div class ="grid grid-cols-2 gap-4 md:grid-cols-3 flex justify-center" >
+            <% for( let i=0; i < category.length; i++ ) { %>
+              <div>
+                <a href="/grocery-items/category/<%=category[i]%>"><button class="bg-transparent w-32 h-24 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+                  ><%=category[i]%></button></a>
+                
+                </div>
+              
+              <% } %>
+
+            <!--
+            <div>
+            <button class="bg-transparent w-32 h-24 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+              Button1
+            </button>
+            </div>
+            <div>
+            <button class="bg-transparent w-32 h-24 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+              Button2
+            </button>
+            </div>
+            <div>
+            <button class="bg-transparent w-32 h-24 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+              Button3
+            </button>
+            </div>
+            <div>
+              <button class="bg-transparent w-32 h-24 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                Button4
+              </button>
+              </div>
+              <div>
+              <button class="bg-transparent w-32 h-24 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                Button5
+              </button>
+              </div>
+              <div>
+              <button class="bg-transparent w-32 h-24 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                Button6
+              </button>
+              </div>
+              -->
+          </div>
       
         </div>
       

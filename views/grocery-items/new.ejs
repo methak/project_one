@@ -40,8 +40,10 @@
                   <label for="isPurchased" class="uppercase">is Purchased: </label>
                   <input id="isPurchased" type="checkbox" name="isPurchased" class="border ml-2 mb-3" /><br />
 
-                  <select name="shoppingLists" class="border w-full mb-7">
-                    <% for( let i=0; i < shoppingLists.length; i++ ) { %>
+                  <!-- rebuilding selection feature because it doesn't currently save shoppinglist to the database -->
+                  <label for="shoppingList" class="uppercase">Choose a store:</label>
+                  <select id="shoppingList" name="shoppingList" class="border w-full mb-7">
+                    <% for (let i=0; i < shoppingLists.length; i++) { %>
                       <option value="<%=shoppingLists[i]._id%>">
                         <%=shoppingLists[i].storeName%>
                       </option>

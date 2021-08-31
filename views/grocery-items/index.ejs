@@ -10,26 +10,28 @@
 
         <nav>
           <a href="/grocery-items/new">Create a New Item</a>
+          <a href="/">Back Home</a>
         </nav>
-        <a href="/">Back Home</a>
-        <h2>Shopping item: </h2>
+
+      <div>
+        <h2>Choose a Category:</h2>
         <% for( let i=0; i < category.length; i++ ) { %>
           <a href="/grocery-items/category/<%=category[i]%>"><%=category[i]%></a>
           <% } %>
+      </div>
 
+      <div>
+        <h2>Shopping items: </h2>
 
         <% for( let i=0; i < groceryItem.length; i++ ) { %>
-            <a href="/grocery-items/<%=groceryItem[i]._id%>">
-                <%=groceryItem[i].name%>
-            </a>
-
-            <!--  ADD DELETE FORM HERE-->
-        <form action="/grocery-items/<%=groceryItem[i]._id%>?_method=DELETE" method="POST">
-
+            <li><a href="/grocery-items/<%=groceryItem[i]._id%>"> <%=groceryItem[i].name%></a>
+            <br/><a href="/grocery-items/<%=groceryItem[i]._id%>/edit">Edit</a>
+            <form action="/grocery-items/<%=groceryItem[i]._id%>?_method=DELETE" method="POST">
+            </form>
             <input type="submit" value="DELETE" />
-            <a href="/grocery-items/<%=groceryItem[i]._id%>/edit">Edit</a>
-        </form>
-            <br>
+
             <% } %>
+      </li>
+      </div>
     </body>
 </html>

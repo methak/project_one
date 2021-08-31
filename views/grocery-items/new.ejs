@@ -16,30 +16,30 @@
               <h1 class="text-center mb-3">New Grocery Item page</h1>
               <form action="/grocery-items" method="POST">
                 <div class="mx-5">
-    
+
                   <label for="name" class="uppercase">Item Name:</label>
                   <br /><input id="name" type="text" name="name" class="border w-full mb-3" />
-    
+
                   <br /><label for="category" class="uppercase">Category:</label>
                   <br /><input id="category" type="text" name="category" value="<%=categoryName%>"
                     class="border w-full mb-3" />
-    
+
                   <br /><label for="description" class="uppercase">Description:</label>
                   <br /><textarea id="description" name="description" style="resize:none; height:100px;"
                     class="border w-full mb-3"></textarea>
-    
+
                   <br /><label for="price" class="uppercase">Price:</label>
                   <br /><input id="price" type="text" name="price" class="border w-full mb-3" />
-    
+
                   <br /><label for="quantity" class="uppercase">Quantity:</label>
                   <br /><input price="quantity" type="text" name="quantity" class="border w-full mb-3" />
-    
+
                   <label for="isOrganic" class="uppercase">is Organic:</label>
                   <input id="isOrganic" type="checkbox" name="isOrganic" class="border ml-2 mb-3" /><br />
-    
+
                   <label for="isPurchased" class="uppercase">is Purchased: </label>
                   <input id="isPurchased" type="checkbox" name="isPurchased" class="border ml-2 mb-3" /><br />
-    
+
                   <select name="shoppingLists" class="border w-full mb-7">
                     <% for( let i=0; i < shoppingLists.length; i++ ) { %>
                       <option value="<%=shoppingLists[i]._id%>">
@@ -47,17 +47,18 @@
                       </option>
                       <% } %>
                   </select>
+
                   <div class="flex justify-between">
                     <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full">
                     <a href="/">Back</a>
                     </button>
-                    
+
                     <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full" type="submit">
                       Add Item
                     </button>
                   </div>
                 </div>
-            </div>
+              </div>
             </form>
           </div>
         </div>

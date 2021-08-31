@@ -9,14 +9,14 @@
 
 
         <nav>
-          <a href="/grocery-items/new">Create a New Item</a>
+          <!-- <a href="/grocery-items/new">Create a New Item</a> -->
           <a href="/">Back Home</a>
         </nav>
 
       <div>
-        <h2>Choose a Category:</h2>
+        <h2>Add a new item by Category:</h2>
         <% for( let i=0; i < category.length; i++ ) { %>
-          <a href="/grocery-items/category/<%=category[i]%>"><%=category[i]%></a>
+            <button><a href="/grocery-items/category/<%=category[i]%>"><%=category[i]%></a></button>
           <% } %>
       </div>
 

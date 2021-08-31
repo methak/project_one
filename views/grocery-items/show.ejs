@@ -13,43 +13,42 @@
           <div class="flex gap-x-4 md:w-2/3 lg:w-1/3 xl:max-w-full">
             <div class="w-full bg-purple-200">
               <div class="my-4">
-        <h1 class="text-center mb-3">Item Info</h1>
-          <div class="mx-5">
+              <h1 class="text-center mb-3">Item Info</h1>
+                <div class="mx-5">
 
-            <label for="name" class="uppercase">Item Name:</label>
-            <input id="name" type="text" name="name" class="border w-full mb-3" value="<%=groceryItem.name%>"/>
+                  <label for="name" class="uppercase">Item Name:</label>
+                  <input id="name" type="text" name="name" class="border w-full mb-3" value="<%=groceryItem.name%>"/>
 
-            <br/><label for="category" class="uppercase">Category:</label>
-            <input id="category" type="text" name="category" class="border w-full mb-3" value="<%=groceryItem.category%>"/>
+                  <br/><label for="category" class="uppercase">Category:</label>
+                  <input id="category" type="text" name="category" class="border w-full mb-3" value="<%=groceryItem.category%>"/>
 
-            <br/><label for="description" class="uppercase">Description:</label>
-            <br/><textarea id="description" name="description" style="resize:none; height:100px;" class="border w-full mb-3"><%=groceryItem.description%></textarea>
+                  <br/><label for="description" class="uppercase">Description:</label>
+                  <br/><textarea id="description" name="description" style="resize:none; height:100px;" class="border w-full mb-3"><%=groceryItem.description%></textarea>
 
-            <br/><label for="price" class="uppercase">Price:</label>
-            <input id="price" type="text" name="price" class="border w-full mb-3" value="<%=groceryItem.price%>"/<br/>
+                  <br/><label for="price" class="uppercase">Price:</label>
+                  <input id="price" type="text" name="price" class="border w-full mb-3" value="<%=groceryItem.price%>"/<br/>
 
-            <br/><label for="quantity" class="uppercase">Quantity:</label>
-            <input id="quantity" type="text" name="quantity" class="border w-full mb-3" value="<%=groceryItem.quantity%>" />
+                  <br/><label for="quantity" class="uppercase">Quantity:</label>
+                  <input id="quantity" type="text" name="quantity" class="border w-full mb-3" value="<%=groceryItem.quantity%>" />
 
-            <label for="isOrganic" class="uppercase">is Organic:</label>
-            <input id="isOrganic" type="checkbox" name="isOrganic" class="border ml-2 mb-3"
-                <% if(groceryItem.isOrganic === true){ %> checked <% } %> />
+                  <label for="isOrganic" class="uppercase">is Organic:</label>
+                  <input id="isOrganic" type="checkbox" name="isOrganic" class="border ml-2 mb-3"
+                      <% if(groceryItem.isOrganic === true){ %> checked <% } %> />
 
-            <br/><label for="isPurchased" class="uppercase">is Purchased: </label>
-            <input id="isPurchased" type="checkbox" name="isPurchased" class="border ml-2 mb-5"
-            <% if(groceryItem.isPurchased === true){ %> checked <% } %> />
+                  <br/><label for="isPurchased" class="uppercase">is Purchased: </label>
+                  <input id="isPurchased" type="checkbox" name="isPurchased" class="border ml-2 mb-5"
+                  <% if(groceryItem.isPurchased === true){ %> checked <% } %> />
 
-              <div class="flex justify-between">
-                <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full">
-                <a href="/">Back</a>
-                </button>
+                  <div class="flex justify-between">
+                    <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full">
+                    <a href="/">Back</a></button>
+                  </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      </div>
     </div>
-    </div>
-  </div>
   </body>
 </html>

@@ -50,7 +50,7 @@ module.exports = {
         return res.send(error);
       } else {
         console.log(newGroceryItem);
-        res.redirect("/grocery-items");
+        res.redirect("/");
       }
     });
   },

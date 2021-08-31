@@ -2,24 +2,53 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
         <title>Grocery Item show page</title>
     </head>
     <body>
-        <h1>Grocery Item show page</h1>
+      <div class="flex justify-center items-center">
+        <div class="container flex rounded-lg my-4 p-4 mx-auto h-full bg-blue-200 w-3/4 md:w-1/3 lg:w-1/3 xl:w-1/4">
+          <div class="w-full flex gap-x-4">
+            <div class="w-full bg-gray-200">
+              <div class="my-4">
+        <h1 class="text-center mb-3">Item Info</h1>
+          <div class="mx-5">
 
-        <nav>
-            <a href="/grocery-items">Back to Grocery Items Index</a>
-        </nav>
         <div>
-            Item Name: <input type="text" name="name" value="<%=groceryItem.name%>"/><br/>
-            Category : <input type="text" name="category" value="<%=groceryItem.category%>"/><br/>
-            Description : <input type="textarea" name="description" value="<%=groceryItem.description%>" /><br/>
-            Price : <input type="text" name="price" value="<%=groceryItem.price%>"/><br/>
-            Quantity : <input type="text" name="quantity" value="<%=groceryItem.quantity%>" /><br/>
-            is Organic : <input type="checkbox" name="isOrganic" 
-                <% if(groceryItem.isOrganic === true){ %> checked <% } %> /><br/>
-            is Purchased : <input type="checkbox" name="isPurchased" 
-            <% if(groceryItem.isPurchased === true){ %> checked <% } %> /><br/> 
-            </div>  
+            <label for="name" class="uppercase">Item Name:</label>
+            <input id="name" type="text" name="name" class="border w-full mb-3" value="<%=groceryItem.name%>"/>
+
+            <br/><label for="category" class="uppercase">Category:</label>
+            <input id="category" type="text" name="category" class="border w-full mb-3" value="<%=groceryItem.category%>"/>
+
+            <br/><label for="description" class="uppercase">Description:</label>
+            <br/><textarea id="description" name="description" style="resize:none; height:100px;" class="border w-full mb-3"><%=groceryItem.description%></textarea>
+
+            <br/><label for="price" class="uppercase">Price:</label>
+            <input id="price" type="text" name="price" class="border w-full mb-3" value="<%=groceryItem.price%>"/<br/>
+
+            <br/><label for="quantity" class="uppercase">Quantity:</label>
+            <input id="quantity" type="text" name="quantity" class="border w-full mb-3" value="<%=groceryItem.quantity%>" />
+
+            <label for="isOrganic" class="uppercase">is Organic:</label>
+            <input id="isOrganic" type="checkbox" name="isOrganic" class="border ml-2 mb-3"
+                <% if(groceryItem.isOrganic === true){ %> checked <% } %> />
+
+            <br/><label for="isPurchased" class="uppercase">is Purchased: </label>
+            <input id="isPurchased" type="checkbox" name="isPurchased" class="border ml-2 mb-5"
+            <% if(groceryItem.isPurchased === true){ %> checked <% } %> />
+
+
+            <br/><a class="w-full justify-center" href="/grocery-items">Back to Items Index</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
     </body>
 </html>

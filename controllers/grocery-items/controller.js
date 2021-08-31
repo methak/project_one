@@ -60,7 +60,7 @@ module.exports = {
         res.send(error);
       } else {
         console.log(deletedGroceryItem.name, "<< Grocery Item deleted");
-        res.redirect("/grocery-items/");
+        res.redirect("/");
       }
     });
   },

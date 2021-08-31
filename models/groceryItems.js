@@ -29,9 +29,9 @@ const groceryItemSchema = new mongoose.Schema({
     type: Boolean
   },
 
-    shoppingList: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'ShoppingList'
+  shoppingList: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'ShoppingList'
   }},
     {timestamps: true})
 

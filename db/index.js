@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const connectionString = 'mongodb://localhost/jamlist';
+const connectionString = process.env.DB_URL || 'mongodb://localhost/jamlist';
 
 const db = mongoose.connect(connectionString, {
   useNewUrlParser: true,

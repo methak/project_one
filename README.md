@@ -35,19 +35,41 @@ npm i ejs express method-override mongoose
 tbd - Heroku
 
 ## Wireframes
+Our first wireframe looked like this:
 ![Image of Wireframe](./assets/wireframe.png)
+
+It later evolved to these frames:
+
+We worked from this sketch to code the home page, and evolved functionality to tell a clearer user story:
+![Image of Wireframe2](./assets/wireframe2.png)
+
+
 
 ## ERD
 ![Image of ERD](./assets/erd.png)
 
 ## Code Snippets
+Metha's favorite Code Snippets:
 `<text> tbd </text>`
+And a brief explanation
+
+Ada's favorite Code Snippets:
+`<text> tbd </text>`
+And a brief explanation
+
+Jess' favorite Code Snippets:
+`<text> tbd </text>`
+And a brief explanation
+
 
 ## Unsolved Problems
 tbd
 
 ## Future Work
-tbd
+* Create ability to host separate users using environmental variables and bcrypt
+* Track previously shopped items
+* Upload an image of a receipt after a shopping trip, and store it with the shopping instance.
+* Incorporate APIs from Apple or Google Maps. When a user sets up a new Store, display it on a map. When a user is at their shopping list, add a button to get directions to the store.
 
 ## Acknowledgements
 tbd :)

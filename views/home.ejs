@@ -25,7 +25,7 @@
             <div class="container pl-1 md:pl-2 pt-2">
               <ul class="">
                 <% for( let i=0; i < groceryItem.length; i++ ) { %>
-
+                  <% if (groceryItem[i].isPurchased === false) { %>
                     <li class= "flex justify-between py-1 border-b-2 border-purple-200">
                       <%=groceryItem[i].name%>
                       <div class="flex justify-items-end">
@@ -51,7 +51,7 @@
                       </div>
 
                       </li>
-
+                    <% } %>
                   <% } %>
 
               </ul>

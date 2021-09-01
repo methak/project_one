@@ -14,7 +14,7 @@
 * HTML
 * CSS
 * JavaScript
-* Tailwind.js
+* Tailwind.css
 * Node.js
 * Express.js
 * MongoDB
@@ -90,7 +90,7 @@ And a brief explanation
 
 
 ## Unsolved Problems
-tbd
+* Unclear how to let users delete shopping lists once items are associated with store.
 
 ## Future Work
 * Create ability to host separate users using environmental variables and bcrypt

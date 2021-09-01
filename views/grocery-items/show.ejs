@@ -25,10 +25,10 @@
                   <br/><label for="description" class="uppercase">Description:</label>
                   <br/><textarea id="description" name="description" style="resize:none; height:100px;" class="border w-full mb-3"><%=groceryItem.description%></textarea>
 
-                  <br/><label for="price" class="uppercase">Price:</label>
-                  <input id="price" type="text" name="price" class="border w-full mb-3" value="<%=groceryItem.price%>"/<br/>
+                  <label for="price" class="uppercase">Price:</label>
+                  <input id="price" type="text" name="price" class="border w-full mb-3" value="<%=groceryItem.price%>"/>
 
-                  <br/><label for="quantity" class="uppercase">Quantity:</label>
+                  <label for="quantity" class="uppercase">Quantity:</label>
                   <input id="quantity" type="text" name="quantity" class="border w-full mb-3" value="<%=groceryItem.quantity%>" />
 
                   <label for="isOrganic" class="uppercase">is Organic:</label>
@@ -37,7 +37,10 @@
 
                   <br/><label for="isPurchased" class="uppercase">is Purchased: </label>
                   <input id="isPurchased" type="checkbox" name="isPurchased" class="border ml-2 mb-5"
-                  <% if(groceryItem.isPurchased === true){ %> checked <% } %> />
+                  <% if(groceryItem.isPurchased === true){ %> checked <% } %> /><br/>
+
+                  <label for="shoppingList" class="uppercase">Store:</label>
+                  <input id="shoppingList" type="text" name="shoppingList" class="border w-full mb-3" value="<%=groceryItem.shoppingList%>">
 
                   <div class="flex justify-between">
                     <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full">

@@ -18,7 +18,18 @@
 * Mongoose
 
 ## Installation
-tbd
+For this project, you will need to install the following dependencies:
+* EJS
+* Express
+* method-override
+* Mongoose
+
+### How to install these packages
+In your terminal, run:
+```
+npm init
+npm i ejs express method-override mongoose
+```
 
 ## Link to Page
 tbd - Heroku

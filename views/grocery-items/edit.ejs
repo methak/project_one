@@ -34,17 +34,25 @@
 
                   <label for="isOrganic" class="uppercase">is Organic:</label>
                   <input id="isOrganic" type="checkbox" name="isOrganic" class="border ml-2 mb-3"/
-                      <% if(groceryItem.isOrganic === true){ %> checked <% } %> /><br/>
+                      <% if(groceryItem.isOrganic === true){ %> checked <% } %> />
 
-                  <label for="isPurchased" class="uppercase">is Purchased: </label>
+                  <br/><label for="isPurchased" class="uppercase">is Purchased: </label>
                   <input id="isPurchased" type="checkbox" name="isPurchased" class="border ml-2 mb-3"
                       <% if(groceryItem.isPurchased === true){ %> checked <% } %> />
+
+                  <br/><label for="shoppingList" class="uppercase">Choose a store:</label>
+                  <select id="shoppingList" name="shoppingList" class="border w-full mb-7">
+                    <% for (let i=0; i < shoppingLists.length; i++) { %>
+                      <option value="<%= shoppingLists[i].storeName %>">
+                        <%= shoppingLists[i].storeName %>
+                      </option>
+                      <% } %>
+                  </select>
 
                   <div class="flex justify-between">
                     <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full">
                     <a href="/">Back</a>
                     </button>
-
 
                     <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full" type="submit">Update Item</button>
                   </div>

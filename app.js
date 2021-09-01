@@ -33,7 +33,7 @@ app.get('/', (req,res)=>{
         }
 
     })
-    
+
 })
 
-app.listen(3088, ()=>console.log('connected to express app on port 3088'))
+app.listen(process.env.PORT || 3088, ()=>console.log('connected to express app on port 3088'))

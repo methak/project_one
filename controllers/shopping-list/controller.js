@@ -29,7 +29,6 @@ module.exports = {
       }
     });
   },
-  
   new: (req, res) => {
     res.render("shopping-list/new.ejs");
   },

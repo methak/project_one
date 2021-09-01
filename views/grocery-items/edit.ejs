@@ -47,16 +47,17 @@
                     <% console.log('looping') %>
 
                     <% if (JSON.stringify(shoppingLists[i]._id) === JSON.stringify(groceryItem.shoppingList)) { %>
-                    <%  console.log('match') %>
-                    <% } else { %>
-                    <%  console.log('no match') %>
-                    <% } %>
-
+                      <%  console.log('match') %>
+                      <option value="<%= shoppingLists[i]._id %>" selected>
+                        <%= shoppingLists[i].storeName %>
+                      </option>
+                      <% } else { %>
+                      <%  console.log('no match') %>
                       <option value="<%= shoppingLists[i]._id %>">
                         <%= shoppingLists[i].storeName %>
                       </option>
-
                       <% } %>
+                    <% } %>
                   </select>
 
                   <div class="flex justify-between">

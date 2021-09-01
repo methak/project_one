@@ -47,26 +47,40 @@ Our first wireframe looked like this, and tells the following user story:
 ![Image of Wireframe](./assets/wireframe.png)
 
 It later evolved to these frames:
+![Image of New Wireframe1](./assets/new_wireframe1.jpg)
+![Image of New Wireframe2](./assets/new_wireframe2.jpg)
+![Image of New Wireframe3](./assets/new_wireframe3.jpg)
+![Image of New Wireframe4](./assets/new_wireframe4.jpg)
 
 We worked from this sketch to code the home page, and evolved functionality to tell a clearer user story:
-![Image of Wireframe2](./assets/wireframe2.png)
+![Image of Wireframe with Color Palette](./assets/wireframe2.png)
+![Color palette](./assets/JamListCSS.png)
 
-Somewhere between working with two different sets of wireframes, we landed on a simpler user story, as listed above.
+Somewhere between working with these different sets of wireframes, we landed on a simpler user story, as illustrated above.
 
 ## ERD
+First draft:
 ![Image of ERD](./assets/erd.png)
+Second draft:
+![Imgae of ERD2](./assets/ERD2.png)
 
 ## Code Snippets
-Metha's favorite Code Snippets:
+###Metha's favorite Code Snippets:
+
 `<text> tbd </text>`
+
 And a brief explanation
 
-Ada's favorite Code Snippets:
+###Ada's favorite Code Snippets:
+
 `<text> tbd </text>`
+
 And a brief explanation
 
-Jess' favorite Code Snippets:
+###Jess' favorite Code Snippets:
+
 `<text> tbd </text>`
+
 And a brief explanation
 
 

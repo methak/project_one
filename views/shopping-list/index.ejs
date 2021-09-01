@@ -17,30 +17,30 @@
              <form action="/grocery-items" method="POST">
                <div class="mx-5">
 
-    <h1 class="text-center mb-3">Shopping List Index Page</h1><br>
+                 <h1 class="text-center mb-3">Shopping List Index Page</h1><br>
 
-      <div class="flex justify-between">
-      <div class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full w-max h-max m-auto my-2">
-        <a href="/shopping-list/new">Create New List</a>
-      </div>
-      </div>
+                 <div class="flex justify-between">
+                   <div class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full w-max h-max m-auto my-2">
+                     <a href="/shopping-list/new">Create New List</a>
+                   </div>
+                 </div>
 
-      <div class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full w-max h-max m-auto">
-        <a href="/" for="name">Back Home</a><br>
-      </div>
-      </div>
-<div class="flex justify-between">
-    <h2 class="text-center mb-3 p-4 w-max h-max m-auto">Shopping List:</h2>
-    <ul>
-     <% for( let i = 0; i < shoppingList.length; i++ ) { %>
-     </div>
+                 <div class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full w-max h-max m-auto">
+                   <a href="/" for="name">Back Home</a><br>
+                 </div>
+               </div>
+                  <div class="flex justify-between">
+                      <h2 class="text-center mb-3 p-4 w-max h-max m-auto">Shopping List:</h2>
+                      <ul>
+                      <% for( let i = 0; i < shoppingList.length; i++ ) { %>
+                   </div>
 
-     <div class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full w-max h-max m-auto my-2">
-       <li><a href="/shopping-list/<%=shoppingList[i]._id%>"><%=shoppingList[i].storeName%></a></li>
-       <% } %>
-    </ul>
-  </div>
-    </div>
+                   <div class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full w-max h-max m-auto my-2">
+                     <li><a href="/shopping-list/<%=shoppingList[i]._id%>"><%=shoppingList[i].storeName%></a></li>
+                     <% } %>
+                   </ul>
+                 </div>
+              </div>
             </div>
           </div>
         </div>

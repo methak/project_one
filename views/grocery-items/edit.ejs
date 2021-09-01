@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
+        <title>Edit Grocery Item page</title>
+    </head>
+    <body class="font-body">
+      <div class="flex justify-center items-center">
+        <div class="container flex rounded-lg my-4 p-4 mx-auto h-full bg-indigo-50 justify-center">
+          <div class="flex gap-x-4 md:w-2/3 lg:w-1/3 xl:max-w-full">
+            <div class="w-full bg-purple-200">
+              <div class="my-4">
+              <h1 class="text-center mb-3">Edit Item</h1>
+              <form action="/grocery-items/<%=groceryItem._id %>?_method=PUT" method="POST">
+                <div class="mx-5">
+
+                  <label for="name" class="uppercase">Item Name:</label>
+                  <br/><input id="name" type="text" name="name" value="<%=groceryItem.name%>" class="border w-full mb-3"/>
+
+                  <br/><label for="category" class="uppercase">Category:</label>
+                  <br/><input id="category" type="text" name="category" value="<%=groceryItem.category%>" class="border w-full mb-3"/>
+
+                  <br/><label for="description" class="uppercase">Description:</label>
+                  <br/><textarea id="description" name="description" style="resize:none; height:100px;" class="border w-full mb-3"><%=groceryItem.description%></textarea>
+
+                  <br/><label for="price" class="uppercase">Price:</label>
+                  <br/><input id="price" type="text" name="price" value="<%=groceryItem.price%>" class="border w-full mb-3"/>
+
+                  <br/><label for="quantity" class="uppercase">Quantity:</label>
+                  <br/><input id="quantity" type="text" name="quantity" value="<%=groceryItem.quantity%>" class="border w-full mb-3"/>
+
+                  <label for="isOrganic" class="uppercase">is Organic:</label>
+                  <input id="isOrganic" type="checkbox" name="isOrganic" class="border ml-2 mb-3"/
+                      <% if(groceryItem.isOrganic === true){ %> checked <% } %> />
+
+                  <br/><label for="isPurchased" class="uppercase">is Purchased: </label>
+                  <input id="isPurchased" type="checkbox" name="isPurchased" class="border ml-2 mb-3"
+                      <% if(groceryItem.isPurchased === true){ %> checked <% } %> />
+
+                  <br/><label for="shoppingList" class="uppercase">Choose a store:</label>
+                  <select id="shoppingList" name="shoppingList" class="border w-full mb-7">
+                    <% for (let i=0; i < shoppingLists.length; i++) { %>
+                      <option value="<%= shoppingLists[i].storeName %>">
+                        <%= shoppingLists[i].storeName %>
+                      </option>
+                      <% } %>
+                  </select>
+
+                  <div class="flex justify-between">
+                    <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full">
+                    <a href="/">Back</a>
+                    </button>
+
+                    <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full" type="submit">Update Item</button>
+                  </div>
+
+                  </div>
+                </div>
+            </form>
+      </div>
+      </div>
+    </div>
+    </body>
+</html>

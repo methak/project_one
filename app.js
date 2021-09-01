@@ -1,28 +1,39 @@
-// config
-const express = require ('express')
+const express = require('express')
 const app = express()
-const port = 3000
+const methodOverride = require('method-override')
+const db = require('./db')
+const {groceryItemsController, shoppingListController} = require('./controllers/index')
+const groceryItem = require('./models/groceryItems')
+const shoppingList = require('./models/shoppingList')
 
-// require mongoose
-const mongoose = require('mongoose');
+app.use(express.static(__dirname + '/public'))
+app.use(methodOverride('_method'))
+app.use(express.urlencoded({extended:true}))
+app.use(express.static('public'))
+app.use(express.json())
+app.use('/grocery-items', groceryItemsController)
+app.use('/shopping-list', shoppingListController)
 
-// import method-override
-const methodOverride = require('method-override');
+// testing code //
+const categoryItems = ['Fruits', 'Vegetables', 'Meat', 'Seafood', 'Frozen Foods', 'Bread & Bakery', 'Beverages', 'Baking', 'Personal Care', 'Household Supplies', 'Baby Items', 'Grains']
 
-// ----- middleware -----
-app.use(express.urlencoded({extended:true}));
+// Create Home Page Route
+app.get('/', (req,res)=>{
+    groceryItem.find({}, (error, allGroceryItems) => {
+        if (error) {
+            res.send(error);
+        } else {
+            shoppingList.find({}, (error, shoppingList) => {
+                if (error) {
+                    res.send(error);
+                } else {
+                    res.render('home.ejs', { category: categoryItems, groceryItem: allGroceryItems, shoppingList: shoppingList })
+                }
+            })
+        }
 
-// ----- method-overide -----
-app.use(methodOverride('_method'));
-
-// ----- server initialization -----
-mongoose.connect('mongodb://localhost:27017/basiccrud', { useNewUrlParser: true});
-mongoose.connection.once('open', ()=> {
-    console.log('connected to mongo');
-});
-
-
-// ----- listener -------
-app.listen(port, () => {
-  console.log("Let's go shopping!")
+    })
+    
 })
+
+app.listen(3088, ()=>console.log('connected to express app on port 3088'))

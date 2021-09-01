@@ -31,7 +31,7 @@ module.exports = {
         return res.send(error);
       } else {
         console.log(newShoppingList);
-        res.redirect("/shopping-list");
+        res.redirect("/");
       }
     });
   },

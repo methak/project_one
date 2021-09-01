@@ -15,7 +15,7 @@ app.use('/grocery-items', groceryItemsController)
 app.use('/shopping-list', shoppingListController)
 
 // testing code //
-const categoryItems = ['Fruits', 'Vegetables', 'Meat', 'Seafood', 'Frozen Foods', 'Bread & Bakery', 'Beverages', 'Baking', 'Personal Care', 'Household Supplies', 'Baby Items', 'Pasta/Rice']
+const categoryItems = ['Fruits', 'Vegetables', 'Meat', 'Seafood', 'Frozen Foods', 'Bread & Bakery', 'Beverages', 'Baking', 'Personal Care', 'Household Supplies', 'Baby Items', 'Grains']
 
 // Create Home Page Route
 app.get('/', (req,res)=>{

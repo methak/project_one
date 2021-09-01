@@ -47,7 +47,7 @@ Our first wireframe looked like this, and tells the following user story:
 ![Image of Wireframe](./assets/wireframe.png)
 
 It later evolved to these frames:
-![Image of New Wireframe1](./assets/new_wireframe1.jpeg)
+![Image of New Wireframe1](./assets/new_wireframe1.jpeg | width=100)
 ![Image of New Wireframe2](./assets/new_wireframe2.jpeg)
 ![Image of New Wireframe3](./assets/new_wireframe3.jpeg)
 ![Image of New Wireframe4](./assets/new_wireframe4.jpeg)

@@ -69,10 +69,20 @@ module.exports = {
       if (error) {
         res.send(error);
       } else {
-        console.log(foundGroceryItem.name, "<< Grocery Item found");
-        res.render("grocery-items/edit.ejs", { groceryItem: foundGroceryItem });
+        // secondary query to pass all stores
+        ShoppingList.find({}, (error, allShoppingLists) => {
+          if (error) {
+            res.send(error);
+          } else {
+            console.log(foundGroceryItem.name, "<< Grocery Item found");
+            console.log(allShoppingLists, "returned objects")
+            // console.log(allShoppingLists[0].storeName, "returned store name of index 0")
+            res.render("grocery-items/edit.ejs", { groceryItem: foundGroceryItem , shoppingLists: allShoppingLists});
+          }
+        })
       }
     });
+
   },
   update: (req, res) => {
     if (req.body.isOrganic === 'on') {

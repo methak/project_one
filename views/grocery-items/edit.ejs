@@ -46,6 +46,9 @@
                     <% for (let i=0; i < shoppingLists.length; i++) { %>
                     <% console.log('looping') %>
 
+                    <% console.log(JSON.stringify(shoppingLists[i]._id)) %>
+                    <% console.log(JSON.stringify(groceryItem.shoppingList)) %>
+
                     <% if (JSON.stringify(shoppingLists[i]._id) === JSON.stringify(groceryItem.shoppingList)) { %>
                       <%  console.log('match') %>
                       <option value="<%= shoppingLists[i]._id %>" selected>

@@ -42,10 +42,20 @@
 
                   <br/><label for="shoppingList" class="uppercase">Choose a store:</label>
                   <select id="shoppingList" name="shoppingList" class="border w-full mb-7">
+
                     <% for (let i=0; i < shoppingLists.length; i++) { %>
-                      <option value="<%= shoppingLists[i].storeName %>">
+                    <% console.log('looping') %>
+
+                    <% if (JSON.stringify(shoppingLists[i]._id) === JSON.stringify(groceryItem.shoppingList)) { %>
+                    <%  console.log('match') %>
+                    <% } else { %>
+                    <%  console.log('no match') %>
+                    <% } %>
+
+                      <option value="<%= shoppingLists[i]._id %>">
                         <%= shoppingLists[i].storeName %>
                       </option>
+
                       <% } %>
                   </select>
 
@@ -60,8 +70,8 @@
                   </div>
                 </div>
             </form>
+          </div>
+        </div>
       </div>
-      </div>
-    </div>
     </body>
 </html>

@@ -47,10 +47,10 @@ Our first wireframe looked like this, and tells the following user story:
 ![Image of Wireframe](./assets/wireframe.png)
 
 It later evolved to these frames:
-![Image of New Wireframe1](./assets/new_wireframe1.jpg)
-![Image of New Wireframe2](./assets/new_wireframe2.jpg)
-![Image of New Wireframe3](./assets/new_wireframe3.jpg)
-![Image of New Wireframe4](./assets/new_wireframe4.jpg)
+![Image of New Wireframe1](./assets/new_wireframe1.jpeg)
+![Image of New Wireframe2](./assets/new_wireframe2.jpeg)
+![Image of New Wireframe3](./assets/new_wireframe3.jpeg)
+![Image of New Wireframe4](./assets/new_wireframe4.jpeg)
 
 We worked from this sketch to code the home page, and evolved functionality to tell a clearer user story:
 ![Image of Wireframe with Color Palette](./assets/wireframe2.png)
@@ -65,19 +65,19 @@ Second draft:
 ![Imgae of ERD2](./assets/ERD2.png)
 
 ## Code Snippets
-###Metha's favorite Code Snippets:
+### Metha's favorite Code Snippets:
 
 `<text> tbd </text>`
 
 And a brief explanation
 
-###Ada's favorite Code Snippets:
+### Ada's favorite Code Snippets:
 
 `<text> tbd </text>`
 
 And a brief explanation
 
-###Jess' favorite Code Snippets:
+### Jess' favorite Code Snippets:
 
 `<text> tbd </text>`
 
@@ -94,7 +94,4 @@ tbd
 * Incorporate APIs from Apple or Google Maps. When a user sets up a new Store, display it on a map. When a user is at their shopping list, add a button to get directions to the store.
 
 ## Acknowledgements
-tbd :)
-
-## External API Use
-Instacart API
+Ada Ruiz, Metha Kusumapan, and Jess LaFrank collaborated to design and code this app during the General Assembly Software Engineering Immersive program in Summer/Fall 2021. We learned languages, frankeworks, and the ecosystems that are GitHub and Heroku from our incredible instructional team of Holly Girourd, Joshua Smith, and Kenny Bushman.

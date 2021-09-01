@@ -78,9 +78,51 @@ And a brief explanation
 
 ### Ada's favorite Code Snippets:
 
-`<text> tbd </text>`
+```
+const mongoose = require('mongoose')
 
-And a brief explanation
+
+const groceryItemSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  category: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String
+  },
+  price: {
+    type: Number,
+    required: true
+  },
+  quantity: {
+    type: Number,
+    required: true,
+    default: 1
+  },
+  isPurchased: {
+    type: Boolean
+  },
+  isOrganic: {
+    type: Boolean
+  },
+
+  shoppingList: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'ShoppingList'
+  }},
+    {timestamps: true})
+
+
+const GroceryItem = mongoose.model('GroceryItem', groceryItemSchema)
+
+module.exports = GroceryItem
+```
+
+I am proud of this code because without it we couldn’t have been able to build this app. It was also the first thing I offered to take up on during this project.
 
 ### Jess' favorite Code Snippets:
 

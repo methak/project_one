@@ -92,7 +92,7 @@ module.exports = {
           res.send(error);
         } else {
           console.log(updatedGroceryItem.name, "<< Grocery Item updated");
-          res.redirect("/grocery-items");
+          res.redirect("/");
         }
       }
     );

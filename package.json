@@ -4,7 +4,7 @@
   "description": "## Overview & User Stories JAMList is an app to help users create and manage shopping lists by store. The user decides what store they are going to, or enters store information if not listed, and then adds items to their list.",
   "main": "app.js",
   "scripts": {
-    "build-css": "tailwindcss build style.css -o public/css/style.css",
+    "build-css": "tailwindcss build -i style.css -o public/css/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

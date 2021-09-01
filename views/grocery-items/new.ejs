@@ -25,7 +25,7 @@
                     class="border w-full mb-3" />
 
                   <br /><label for="description" class="uppercase">Description:</label>
-                  <br /><textarea id="description" name="description" style="resize:none; height:100px;"
+                  <br /><textarea id="description" name="description" style="resize:none; height:80px;"
                     class="border w-full mb-3"></textarea>
 
                   <br /><label for="price" class="uppercase">Price:</label>
@@ -36,11 +36,12 @@
 
                   <label for="isOrganic" class="uppercase">is Organic:</label>
                   <input id="isOrganic" type="checkbox" name="isOrganic" class="border ml-2 mb-3" /><br />
-
+                  <!--
                   <label for="isPurchased" class="uppercase">is Purchased: </label>
                   <input id="isPurchased" type="checkbox" name="isPurchased" class="border ml-2 mb-3" /><br />
-
-                  <label for="shoppingList" class="uppercase">Choose a store:</label>
+                  -->
+                  <!-- rebuilding selection feature because it doesn't currently save shoppinglist to the database -->
+                  <label for="shoppingList" class="uppercase font-bold">Choose a store:</label>
                   <select id="shoppingList" name="shoppingList" class="border w-full mb-7">
                     <% for (let i=0; i < shoppingLists.length; i++) { %>
                       <option value="<%=shoppingLists[i]._id%>">

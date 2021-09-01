@@ -25,8 +25,13 @@
             <div class="container pl-1 md:pl-2 pt-2">
               <ul class="">
                 <% for( let i=0; i < groceryItem.length; i++ ) { %>
+<<<<<<< HEAD
                   <% if (groceryItem[i].isPurchased === false) { %>
                     <li class= "flex justify-between py-1 border-b-2 border-purple-200">
+=======
+                  
+                    <li class= "flex justify-between py-1 border-b-2 hover:bg-purple-200 border-purple-200">
+>>>>>>> 840a1591231788a67497c16706c21cbf61594fc4
                       <%=groceryItem[i].name%>
                       <div class="flex justify-items-end">
                         <a  href="/grocery-items/<%=groceryItem[i]._id%>/edit">
@@ -59,7 +64,7 @@
 
           <div class="mt-8 p-2 border-t-2 border-purple-200">
             <div class= "font-bold p-2">
-              Shopping History
+              Shopping Store
             </div>
             <div class="container">
               <ul>
@@ -81,7 +86,7 @@
         <!--Main Display Section-->
         <div class="w-full bg-white rounded-lg p-2 shadow-lg">
           <div class="flex justify-end">
-            <div class="font-bold text-lg mt-2 pr-2">Grocery Item</div>
+            <div class="font-bold text-lg mt-2 pr-2">Add Item</div>
           </div>
         <div class=" flex justify-center mt-4">
 

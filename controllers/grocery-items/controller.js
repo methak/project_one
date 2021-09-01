@@ -76,7 +76,7 @@ module.exports = {
           } else {
             console.log(foundGroceryItem.name, "<< Grocery Item found");
             console.log(allShoppingLists, "returned objects")
-            console.log(allShoppingLists[0].storeName, "returned store name of index 0")
+            // console.log(allShoppingLists[0].storeName, "returned store name of index 0")
             res.render("grocery-items/edit.ejs", { groceryItem: foundGroceryItem , shoppingLists: allShoppingLists});
           }
         })

@@ -1,4 +1,4 @@
-const { ShoppingList } = require("../../models");
+const { ShoppingList, GroceryItem } = require("../../models");
 
 module.exports = {
   getAll: (req, res) => {
@@ -16,8 +16,16 @@ module.exports = {
       if (error) {
         res.send(error);
       } else {
-        console.log(foundShoppingList.storeName, "<< stores found");
-        res.render("shopping-list/show.ejs", { shoppingList: foundShoppingList });
+        GroceryItem.find({shoppingList :req.params.id}, (error, allGroceryItems) => {
+          if (error) {
+            res.send(error)
+          } else {
+            console.log(allGroceryItems)
+            
+            console.log(foundShoppingList.storeName, "<< stores found");
+            res.render("shopping-list/show.ejs", { shoppingList: foundShoppingList , groceryItems: allGroceryItems});
+          }
+        })
       }
     });
   },

@@ -72,9 +72,9 @@ Second draft:
 ## Code Snippets
 ### Metha's favorite Code Snippets:
 
-`<text> tbd </text>`
+![Metha code snipet](./assets/carbon(1).png)
 
-And a brief explanation
+Implementation on SVG file as a button type and modify this button as a link and submit form
 
 ### Ada's favorite Code Snippets:
 

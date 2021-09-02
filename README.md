@@ -126,9 +126,32 @@ I am proud of this code because without it we couldn’t have been able to build
 
 ### Jess' favorite Code Snippets:
 
-`<text> tbd </text>`
+```
+<br/><label for="shoppingList" class="uppercase">Choose a store:</label>
+<select id="shoppingList" name="shoppingList" class="border w-full mb-7">
 
-And a brief explanation
+  <% for (let i=0; i < shoppingLists.length; i++) { %>
+  <% console.log('looping') %>
+
+  <% console.log(JSON.stringify(shoppingLists[i]._id)) %>
+  <% console.log(JSON.stringify(groceryItem.shoppingList)) %>
+
+  <% if (JSON.stringify(shoppingLists[i]._id) === JSON.stringify(groceryItem.shoppingList)) { %>
+    <%  console.log('match') %>
+    <option value="<%= shoppingLists[i]._id %>" selected>
+      <%= shoppingLists[i].storeName %>
+    </option>
+    <% } else { %>
+    <%  console.log('no match') %>
+    <option value="<%= shoppingLists[i]._id %>">
+      <%= shoppingLists[i].storeName %>
+    </option>
+    <% } %>
+  <% } %>
+</select>
+```
+
+With help from my teammates and our instructional team, I figured out how to correctly display the current storeList on the Edit Grocery Item page. With a conditional statement, I used a conditional statement to compare shopping list values, and through research of my own discovered you can't compare objects like you can compare strings, so used a JSON method .stringify() to turn the returned values to strings.
 
 
 ## Unsolved Problems

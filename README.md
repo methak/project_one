@@ -72,21 +72,86 @@ Second draft:
 ## Code Snippets
 ### Metha's favorite Code Snippets:
 
-`<text> tbd </text>`
+![Metha code snipet](./assets/carbon(1).png)
 
-And a brief explanation
+Implementation on SVG file as a button type and modify this button as a link and submit form
 
 ### Ada's favorite Code Snippets:
 
-`<text> tbd </text>`
+```
+const mongoose = require('mongoose')
 
-And a brief explanation
+
+const groceryItemSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  category: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String
+  },
+  price: {
+    type: Number,
+    required: true
+  },
+  quantity: {
+    type: Number,
+    required: true,
+    default: 1
+  },
+  isPurchased: {
+    type: Boolean
+  },
+  isOrganic: {
+    type: Boolean
+  },
+
+  shoppingList: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'ShoppingList'
+  }},
+    {timestamps: true})
+
+
+const GroceryItem = mongoose.model('GroceryItem', groceryItemSchema)
+
+module.exports = GroceryItem
+```
+
+I am proud of this code because without it we couldn’t have been able to build this app. It was also the first thing I offered to take up on during this project.
 
 ### Jess' favorite Code Snippets:
 
-`<text> tbd </text>`
+```
+<br/><label for="shoppingList" class="uppercase">Choose a store:</label>
+<select id="shoppingList" name="shoppingList" class="border w-full mb-7">
 
-And a brief explanation
+  <% for (let i=0; i < shoppingLists.length; i++) { %>
+  <% console.log('looping') %>
+
+  <% console.log(JSON.stringify(shoppingLists[i]._id)) %>
+  <% console.log(JSON.stringify(groceryItem.shoppingList)) %>
+
+  <% if (JSON.stringify(shoppingLists[i]._id) === JSON.stringify(groceryItem.shoppingList)) { %>
+    <%  console.log('match') %>
+    <option value="<%= shoppingLists[i]._id %>" selected>
+      <%= shoppingLists[i].storeName %>
+    </option>
+    <% } else { %>
+    <%  console.log('no match') %>
+    <option value="<%= shoppingLists[i]._id %>">
+      <%= shoppingLists[i].storeName %>
+    </option>
+    <% } %>
+  <% } %>
+</select>
+```
+
+With help from my teammates and our instructional team, I figured out how to correctly display the current storeList on the Edit Grocery Item page. With a conditional statement, I used a conditional statement to compare shopping list values, and through research of my own discovered you can't compare objects like you can compare strings, so used a JSON method .stringify() to turn the returned values to strings.
 
 
 ## Unsolved Problems

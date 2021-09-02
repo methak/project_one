@@ -2,38 +2,65 @@
 <html>
     <head>
       <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" type="text/css" href="/css/style.css" />
-      <title>Shopping List Show Page</title>
+      <title>Shopping List</title>
     </head>
     <body class=”font-body”>
       <div class="flex justify-center items-center">
-        <div class="container flex rounded-lg my-4 p-4 mx-auto h-full bg-indigo-50 justify-center">
+        <div class="container flex rounded-lg my-4 p-4 mx-auto h-screen bg-indigo-50 justify-center">
           <div class="flex gap-x-4 md:w-2/3 lg:w-1/3 xl:max-w-full">
             <div class="w-full bg-purple-200">
               <div class="my-4">
 
-                <h1 class="text-center mb-3">Shopping List Show Page</h1>
-                <div class="mx-10">
-                  Store Name: <%=shoppingList.storeName%><br>
-                  Store Address: <%=shoppingList.storeAddress%><br>
-                  Store Hours: <%=shoppingList.storeHours%><br>
-                  Total Price: <%=shoppingList.totalPrice%><br>
-                  Date: <%= shoppingList.updatedAt%>
+                <h1 class="text-center text-lg font-bold mb-3">Shopping List</h1>
+                <div class="mx-4 ">
+                  <p class=" font-semibold text-lg text-purple-900">Store: <%=shoppingList.storeName%>
+                  </p>
+                  <div>
+                    Address: <%=shoppingList.storeAddress%>
+                  </div>
+                  <div class="flex justify-between">
+                  <div>
+                    Store Hours: <%=shoppingList.storeHours%>   
+                  </div>
+                  <a class ="underline text-purple-900" href="/shopping-list/<%=shoppingList._id%>/edit">Edit</a>
+                  </div>
+                
+                  <!--Total Price: <%=shoppingList.totalPrice%> -->
                 </div>
               </div>
-              <div class="flex justify-between">
-                <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full">
-                  <a href="/shopping-list">Back</a>
-                </button>
-
-                <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full">
-                  <a href="/shopping-list/<%=shoppingList._id%>/edit">Edit</a>
-                </button>
-
-                <form method="POST" action="/shopping-list/<%=shoppingList._id%>?_method=DELETE">
-                  <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full" type="submit">Delete</button>
-                </form>
-            </div>
+              <div class="bg-white p-2 mx-4">
+                <div class="container pl-1 md:pl-2 pt-2">
+                  <form action="/grocery-items/<%=groceryItems._id %>?_method=PUT" method="POST">
+                    <ul class="">
+                      <% for( let i=0; i < groceryItems.length; i++ ) { %>
+                  
+                        <li class="flex justify-between py-1 border-b-2 border-purple-200">
+                          <%=groceryItems[i].name%>
+                            <div class="flex justify-items-end">
+                  
+                              <input id="isPurchased" type="checkbox" name="isPurchased" class="transform scale-125 mr-6" />
+                            </div>
+                  
+                        </li>
+                  
+                        <% } %>
+                  
+                    </ul>
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                      <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full">
+                        <a href="/">Back</a>
+                      </button>
+                  
+                  
+                      <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full"
+                        type="submit">Update</button>
+                  </form>
+                </div>
+              </div>
           </div>
         </div>
       </div>

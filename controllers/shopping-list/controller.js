@@ -16,12 +16,12 @@ module.exports = {
       if (error) {
         res.send(error);
       } else {
-        GroceryItem.find({}, (error, allGroceryItems) => {
+        GroceryItem.find({shoppingList :req.params.id}, (error, allGroceryItems) => {
           if (error) {
             res.send(error)
           } else {
             console.log(allGroceryItems)
-            console.log(allGroceryItems[1].name)
+            
             console.log(foundShoppingList.storeName, "<< stores found");
             res.render("shopping-list/show.ejs", { shoppingList: foundShoppingList , groceryItems: allGroceryItems});
           }

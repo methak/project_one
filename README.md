@@ -72,7 +72,7 @@ Second draft:
 ## Code Snippets
 ### Metha's favorite Code Snippets:
 
-![Metha code snipet](./assets/carbon (1).png)
+![Metha code snipet](./assets/carbon(1).png)
 
 Implementation on SVG file as a button type and modify this button as a link and submit form
 

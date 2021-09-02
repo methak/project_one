@@ -33,15 +33,29 @@
               </div>
               <div class="bg-white p-2 mx-4">
                 <div class="container pl-1 md:pl-2 pt-2">
-                  <form action="/grocery-items/<%=groceryItems._id %>?_method=PUT" method="POST">
+                  
                     <ul class="">
                       <% for( let i=0; i < groceryItems.length; i++ ) { %>
                   
-                        <li class="flex justify-between py-1 border-b-2 border-purple-200">
+                        <li class="flex justify-between border-b-2 border-purple-200">
                           <%=groceryItems[i].name%>
                             <div class="flex justify-items-end">
-                  
-                              <input id="isPurchased" type="checkbox" name="isPurchased" class="transform scale-125 mr-6" />
+                              <% if (groceryItems[i].isPurchased === false) { %>
+                              <form id="form" action="/shopping-list/item-update/<%=groceryItems._id %>?_method=PUT" method="POST">
+                                <button type="submit">
+                                  <svg class="h-8 w-8 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                  </svg> 
+                                </button>
+                            </form><% }  else {%>
+                              <form id="form" action="/shopping-list/item-update/<%=groceryItems._id %>?_method=PUT" method="POST">
+                                <button type="submit">
+                                  <svg class="h-8 w-8 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                  </svg>
+                                  
+                                </button>
+                            </form><% } %>
                             </div>
                   
                         </li>
@@ -54,11 +68,7 @@
                       <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full">
                         <a href="/">Back</a>
                       </button>
-                  
-                  
-                      <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full"
-                        type="submit">Update</button>
-                  </form>
+                
                 </div>
               </div>
           </div>

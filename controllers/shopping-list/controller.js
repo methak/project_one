@@ -63,6 +63,20 @@ module.exports = {
       }
     });
   },
+  item_update: (req, res) => {
+
+    GroceryItem.findByIdAndUpdate(req.params.id,{isPurchased : !isPurchased}, (error, updatedGroceryItem) => {
+
+        if (error) {
+          res.send(error);
+        } else {
+          console.log(updatedGroceryItem.name, "<< Grocery Item isPurchased updated");
+          //res.redirect("/");
+        }
+      }
+    );
+  },
+
   update: (req, res) => {
     ShoppingList.findByIdAndUpdate(
       req.params.id,

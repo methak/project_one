@@ -33,32 +33,31 @@
               </div>
               <div class="bg-white p-2 mx-4">
                 <div class="container pl-1 md:pl-2 pt-2">
-                  <ul class="">
-                    <% for( let i=0; i < groceryItems.length; i++ ) { %>
-              
-                      <li class="flex justify-between py-1 border-b-2 border-purple-200">
-                        <%=groceryItems[i].name%>
-                          <div class="flex justify-items-end">
-                            
-                            <form action="/grocery-items/<%=groceryItems._id %>?_method=PUT" method="POST">
+                  <form action="/grocery-items/<%=groceryItems._id %>?_method=PUT" method="POST">
+                    <ul class="">
+                      <% for( let i=0; i < groceryItems.length; i++ ) { %>
+                  
+                        <li class="flex justify-between py-1 border-b-2 border-purple-200">
+                          <%=groceryItems[i].name%>
+                            <div class="flex justify-items-end">
+                  
                               <input id="isPurchased" type="checkbox" name="isPurchased" class="transform scale-125 mr-6" />
-                            </form>
-                          </div>
-              
-                      </li>
-              
-                      <% } %>
-              
-                  </ul>
-                </div>
-                <div class="flex justify-between">
-                  <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full">
-                    <a href="/">Back</a>
-                  </button>
-              
-                  <form method="POST" action="/shopping-list/<%=shoppingList._id%>?_method=DELETE">
-                    <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full"
-                      type="submit">Update</button>
+                            </div>
+                  
+                        </li>
+                  
+                        <% } %>
+                  
+                    </ul>
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                      <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full">
+                        <a href="/">Back</a>
+                      </button>
+                  
+                  
+                      <button class=" bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full"
+                        type="submit">Update</button>
                   </form>
                 </div>
               </div>

@@ -71,7 +71,7 @@ module.exports = {
           res.send(error);
         } else {
           console.log(updatedGroceryItem.name, "<< Grocery Item isPurchased updated");
-          //res.redirect("/");
+          res.send(updatedGroceryItem);
         }
       }
     );
